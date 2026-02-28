@@ -1,4 +1,5 @@
-# DarkBook — ZK Dark Pool on Monad ===
+
+## DarkBook — ZK Dark Pool on Monad ===
 
 A privacy-preserving on-chain orderbook DEX. Traders submit encrypted orders backed by ZK proofs that verify validity and balance sufficiency without revealing price, size, or direction. Orders are matched off-chain and settled on-chain via a reveal-and-verify mechanism.
 
@@ -372,31 +373,4 @@ npx vitest
 | `deposit` | ~250-310k | ~0.06 MON |
 
 ---
-
-## Security Notes
-
-- The **UltraPlonkVerifier** is currently a placeholder that returns `true` for all proofs. It **must** be replaced with the auto-generated verifier from `nargo codegen-verifier` before any mainnet deployment.
-- The matcher sees plaintext orders (privacy is from other traders and on-chain observers, not from the matcher). Future upgrade path includes MPC-based matching.
-- Nullifiers prevent double-submission of orders.
-- Only authorized matchers can submit settlements (configurable via `setPermissionedMatching`).
-- Balance root updates are restricted to the DarkBookEngine contract.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| ZK Circuits | Noir (nargo 0.30+) |
-| Smart Contracts | Solidity 0.8.24 (Foundry) |
-| Blockchain | Monad (EVM-compatible, 10k+ TPS) |
-| Matcher | Node.js / TypeScript |
-| Frontend | Next.js 14, Tailwind, shadcn/ui |
-| Wallet | wagmi v2 + viem + RainbowKit |
-| State Management | Zustand |
-| ZK Browser Prover | @noir-lang/noir_js + @aztec/bb.js (WASM) |
-| Encryption | @noble/curves (ECDH) + @noble/ciphers (AES-GCM) |
-| Testing | Foundry (forge test), Vitest |
-#   D A R K B O O K 
- 
  
