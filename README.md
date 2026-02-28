@@ -3,8 +3,6 @@
 
 A privacy-preserving on-chain orderbook DEX. Traders submit encrypted orders backed by ZK proofs that verify validity and balance sufficiency without revealing price, size, or direction. Orders are matched off-chain and settled on-chain via a reveal-and-verify mechanism.
 
-Built with **Noir** (ZK circuits), **Solidity** (smart contracts on Monad), **Node.js** (matcher service), and **Next.js** (frontend).
-
 ---
 
 ## Architecture
