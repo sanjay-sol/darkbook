@@ -1,5 +1,5 @@
 
-## DarkBook — ZK Dark Pool on Monad ===
+## DarkBook — ZK Dark Pool on Monad 
 
 A privacy-preserving on-chain orderbook DEX. Traders submit encrypted orders backed by ZK proofs that verify validity and balance sufficiency without revealing price, size, or direction. Orders are matched off-chain and settled on-chain via a reveal-and-verify mechanism.
 
